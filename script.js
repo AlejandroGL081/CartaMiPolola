@@ -27,20 +27,16 @@
   lb.addEventListener("click", function(){ lb.classList.remove("on"); });
   document.addEventListener("keydown", function(e){ if (e.key === "Escape") lb.classList.remove("on"); });
 
-  // Música: intenta sonar al abrir y, si el navegador la bloquea, arranca con el primer toque
-  var music = document.getElementById("music"), mbtn = document.getElementById("mbtn"), manual = false;
-  music.volume = 0.85;
-  function label(){ mbtn.textContent = music.paused ? "♪ Activar música" : "❚❚ Pausar música"; mbtn.classList.toggle("wait", music.paused && !manual); }
-  function go(){ var pr = music.play(); if (pr && pr.then) pr.then(label, label); else label(); }
-  var evs = ["click", "touchend", "keydown"];
-  function firstTouch(){
-    if (!manual && music.paused) go();
-    if (!music.paused) evs.forEach(function(ev){ document.removeEventListener(ev, firstTouch); });
-  }
-  evs.forEach(function(ev){ document.addEventListener(ev, firstTouch); });
-  mbtn.addEventListener("click", function(e){ e.stopPropagation(); manual = true; if (music.paused) go(); else { music.pause(); label(); } });
-  music.addEventListener("play", label); music.addEventListener("pause", label);
-  go(); label();
+  var music = document.getElementById("music");
+
+music.volume = 0.85;
+
+// Intentar reproducir automáticamente
+window.addEventListener("load", function () {
+    music.play().catch(function(err){
+        console.log("Autoplay bloqueado por el navegador:", err);
+    });
+});
 
   // Contador del tiempo juntos
   var start = new Date(2025, 7, 18, 17, 0, 0), cEl = document.getElementById("count"), tEl = document.getElementById("total");
