@@ -1,0 +1,6 @@
+CÓMO PUBLICARLO EN GITHUB PAGES
+1. Entra a github.com, inicia sesión y toca "New repository". Ponle un nombre (por ejemplo album-andy) y déjalo en Public.
+2. En el repositorio nuevo elige "uploading an existing file".
+3. Arrastra el CONTENIDO de esta carpeta (index.html, style.css, script.js, cancion.mp3, .nojekyll y la carpeta fotos) y toca "Commit changes".
+4. Ve a Settings > Pages. En "Source" elige "Deploy from a branch", rama main y carpeta / (root). Toca Save.
+5. En 1 o 2 minutos tu página estará en: https://TU-USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/

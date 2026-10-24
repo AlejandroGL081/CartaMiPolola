@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Álbum de recuerdos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true"></div>
+<div id="lights" aria-hidden="true"></div>
+<main>
+  <div class="today">Viernes, 23 de octubre de 2026</div>
+  <header class="hero">
+    <small contenteditable="true" spellcheck="false">Para Andy</small>
+    <h1 contenteditable="true" spellcheck="false">Carta a Mi polola hermosa...</h1>
+    <p id="typed" aria-live="polite"></p>
+    
+  </header>
+
+  <section class="cardwrap">
+    <div class="letter">
+      <p contenteditable="true" spellcheck="false">Quiero comenzar diciéndote lo mucho que mi corazon y mi alma te aman ♥ tal vez después de todo pienses que solo lo digo por decir pero quiero que entiendas que <b class="hl">TÚ</b> lo eres <b class="hl">TODO</b> en mi vida!.</p>
+      <p contenteditable="true" spellcheck="false">Créeme que no he olvidado lo que paso, lo que hice y por lo que te hice pasar, no hay momento en el que no piense en eso y daría lo que fuera por que nada de eso hubiera pasado.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="sub">Cada foto es un pedacito de nuestra historia.</p>
+    <div class="mosaic" id="mosaic"></div>
+  </section>
+
+  <section class="cardwrap">
+    <div class="letter">
+      <p contenteditable="true" spellcheck="false">Hay algo que quiero que tengas muy en claro, no me importa todas las veces que te lo tenga que decir pero quiero que tengas muy en claro que quiero mi vida contigo, tu eres mi futuro, eres la mujer por la que daría todo en esta vida.. <b class="hl">ERES EL AMOR DE MI VIDA!</b> y por nada del mundo me voy a rendir contigo.</p>
+      <p contenteditable="true" spellcheck="false">Quiero darte las gracias por haberme aceptado para estar contigo, se que no lo merezco y que no podría pedirte nada pero a pesar de eso estas aquí, en mi vida y me volviste a abrir las puertas y no se como agradecértelo, pero lo que si se es que pasare toda la vida demostrándote que siempre sin importar nada ni nadie siempre te voy a elegir a ti, siempre serás mi prioridad.</p>
+    </div>
+  </section>
+
+  <section class="cardwrap">
+    <div class="letter">
+      <p contenteditable="true" spellcheck="false">Desde el momento en que empezamos a platicar tuve esa sensación de haber encontrado algo totalmente diferente en ti, algo completamente nuevo, algo que no crei que podría sentir, esa conexión tan especial que tuve contigo desde el principio no la había sentido con nadie. Fue como si hubieras activado todo en mi, tantas cosas y sentimientos que llevaban muertos mucho tiempo como si todo en mi se hubiera vuelto a unir y no fue para menos por que tu me devolviste la vida y esa felicidad que ya había perdido y no lo sabia.</p>
+      <p contenteditable="true" spellcheck="false">Contigo he sentido tantas emociones que no pensé que podría sentir, tu me has demostrado lo que es ser realmente amado y lo que es amar de verdad de tal manera que eres la razón por la que no me he rendido, la razón por la que me quiero esforzar tanto en la vida.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Siempre contigo</h2>
+    <div class="mosaic" id="mosaic2"></div>
+  </section>
+
+  <section class="cardwrap">
+    <div class="letter">
+      <p contenteditable="true" spellcheck="false">Me ha gustado que para poder entenderme tu me has hecho ver ese lado vulnerable que tengo, abrir mi corazon y dejar que alguien mas me vea realmente y olvidarme del miedo a decir lo que siento.</p>
+      <p contenteditable="true" spellcheck="false">Tu me has mostrado lo que es realmente el amor por que contigo he aprendido a amarme a mi mismo también como lo hago contigo. Te amo de una forma tan intensa y se que el amor que tengo por ti se seguirá extendiendo por cada rincon de mi ser y en todas las vidas posibles donde nuestras almas puedan encontrarse.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="finale" contenteditable="true" spellcheck="false">GRACIAS MI AMOR POR CAMBIAR MI VIDA. TE AMO Y TE AMARE HASTA LA ETERNIDAD ♥</p>
+    <button class="heart" id="heart" aria-label="Enviar corazones">♥</button>
+  </section>
+
+  <section class="together">
+    <h2>Nuestro tiempo juntos</h2>
+    
+    <div class="count" id="count" role="timer" aria-label="Tiempo juntos"></div>
+    <p class="total" id="total"></p>
+  </section>
+  <footer>Para Andy, con todo mi cariño</footer>
+</main>
+
+
+<audio id="music" loop preload="auto" src="cancion.mp3"></audio>
+<button class="mbtn" id="mbtn" type="button">♪ Activar música</button>
+<div id="lb"><img alt="Foto ampliada"></div>
+<script src="script.js"></script>
+</body>
+</html>
